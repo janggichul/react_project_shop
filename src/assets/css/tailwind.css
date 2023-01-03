@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.menu {
+  top: 112px;
+}
+
+.drawer-content {
+  max-height: initial !important;
+  min-height: -webkit-fill-available;
+}
+
+.drawer-toggle:checked + .drawer-content {
+  max-height: 100vh !important;
+}
+
+.js-searchedItem:active span {
+  color: white !important;
+}
