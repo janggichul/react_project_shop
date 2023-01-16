@@ -1,9 +1,9 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+import React from 'react'
 import { RecoilRoot } from 'recoil';
 import { CART_ITEM } from './composables/useCartLoad';
 import { cartState } from './store/cart';
-import App from './App';
+import {createRoot} from 'react-dom/client'
+import App from './App'
 
 const container: any = document.getElementById('app');
 const root = createRoot(container);

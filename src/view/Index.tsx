@@ -1,11 +1,11 @@
-import Slider from '../components/Slider';
-import ItemList from '../components/ItemList';
+import ItemList from "../components/ItemList"
+import Slider from "../components/Slider"
 
 const Index = (): JSX.Element => {
-  return (
+    return (
     <>
-      <Slider />
-      <section className='pt-6 lg:pt-12 pb-4 lg:pb-8 px-4 xl:px-2 mt-10 xl:container mx-auto'>
+    <Slider />
+    <section className='pt-6 lg:pt-12 pb-4 lg:pb-8 px-4 xl:px-2 mt-10 xl:container mx-auto'>
         <ItemList title='패션' scroll={true} />
       </section>
       <section className='pt-6 lg:pt-12 pb-4 lg:pb-8 px-4 xl:px-2 xl:container mx-auto'>
@@ -15,7 +15,7 @@ const Index = (): JSX.Element => {
         <ItemList title='디지털' scroll={true} />
       </section>
     </>
-  );
-};
+    )
+}
 
-export default Index;
+export default Index

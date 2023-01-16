@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
-import { toCurrencyFormat } from '../helpers/helpers';
-import type { Product } from '../store/products';
-import ProductsLoad from './ProductsLoad';
+import { Link } from "react-router-dom";
+import { toCurrencyFormat } from "../helpers/helpers";
+import { Product } from "../store/products"
+import ProductsLoad from "./ProductsLoad";
 
-const ProductsList = ({ products, limit }: { products: Product[]; limit: number }): JSX.Element => {
-  return (
-    <>
-      {0 < products.length ? (
+const ProductsList = ({products, limit}: {products:Product[]; limit: number}): JSX.Element => {
+    return (
+        <>
+              {0 < products.length ? (
         products.slice(0, limit).map((product: Product) => {
           return (
             <Link to={`/product/${product.id}`} key={product.id} className='card card-bordered border-gray-200 dark:border-gray-800 card-compact lg:card-normal'>
@@ -23,8 +23,8 @@ const ProductsList = ({ products, limit }: { products: Product[]; limit: number 
       ) : (
         <ProductsLoad limit={limit} />
       )}
-    </>
-  );
-};
+        </>
+    )
+}
 
-export default ProductsList;
+export default ProductsList

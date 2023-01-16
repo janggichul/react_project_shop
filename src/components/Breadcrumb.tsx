@@ -1,26 +1,24 @@
-import { Category } from '../constants/category';
+import { Category } from "../contensts/category";
 
 type BreadCrumbs = {
-  category?: string;
-  crumb?: string;
-} & typeof defaultProps;
+    category: string;
+    crumb: string;
+} & typeof defaultProps
 
 const defaultProps = {
-  category: '',
-  crumb: '',
-};
+    category: '',
+    crumb: '',
+}
 
-const BreadCrumb = ({ category, crumb }: BreadCrumbs): JSX.Element => {
-  return (
-    <div className='text-sm breadcrumbs'>
-      <ul>
-        <li>{!!Category[category] ? Category[category] : category}</li>
-        <li>{crumb}</li>
-      </ul>
-    </div>
-  );
-};
+const BreadCrumb = ({category, crumb}: BreadCrumbs):JSX.Element => {
+    return (
+        <div className="text-sm breadcrumbs">
+            <ul>
+                <li>{!!Category[category] ? Category[category] : category}</li>
+                <li>{crumb}</li>
+            </ul>
+        </div>
+    )
+}
 
-BreadCrumb.defaultProps = defaultProps;
-
-export default BreadCrumb;
+export default BreadCrumb

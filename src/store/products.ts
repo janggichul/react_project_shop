@@ -1,7 +1,8 @@
+import axios from 'axios';
 import { selector } from 'recoil';
 
-const productsURL = '/products.json';
-// const productsURL = 'https://fakestoreapi.com/products';
+// const productsURL = '/products.json';
+const productsURL = 'https://fakestoreapi.com/products';
 
 interface Rating {
   rate?: 0;
@@ -17,15 +18,16 @@ export interface Product {
   rating: Rating;
 }
 
-export const productsList = selector<Product[]>({
-  key: 'productsList',
-  get: async () => {
-    try {
-      const response = await fetch(productsURL);
-      return (await response.json()) || [];
-    } catch (error) {
-      console.log(`Error: \n${error}`);
-      return [];
-    }
-  },
-});
+
+  export const productsList = selector<Product[]>({
+    key: 'productsList',
+    get: async () => {
+      try {
+        const response = await fetch(productsURL);
+        return (await response.json()) || [];
+      } catch (error) {
+        console.log(`Error: \n${error}`);
+        return [];
+      }
+    },
+  });
